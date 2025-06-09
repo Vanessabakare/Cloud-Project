@@ -1,0 +1,178 @@
+/* General Style Reset */
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  width: 100%;
+  font-family: "Courier Prime", monospace;
+  font-size: 16px;
+  background-color: #e499ad;
+  color: #222;
+  line-height: 1.6;
+  /* background-image: linear-gradient(to right, E499AD, #eef1f5, #fefdf7); */
+}
+
+/* navBar Styling */
+nav {
+  background-color: #fef9f3;
+  width: 100%;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.navBar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* font-size: clamp(11px, 1.4vw, 18px); */
+  padding: 10px;
+  flex-wrap: wrap;
+}
+
+.ProjectTitle h1 {
+  font-family: "Courier Prime", monospace;
+  font-size: clamp(18px, 1.5vw, 40px);
+  font-style: normal;
+  font-weight: 700;
+  color: #222;
+}
+
+.navBarLinks {
+  display: flex;
+  gap: 20px;
+}
+
+.navBarLinks a {
+  font-size: clamp(10px, 1vw, 18px);
+  font-weight: 600;
+  align-self: center;
+  text-decoration: none;
+  }
+
+.navBarLinks a:hover {
+  color: #e499ad;
+}
+
+.text {
+  color: black;
+  font-family: "Courier Prime", monospace;
+  font-weight: 200;
+  font-style: normal;
+}
+
+/* Main Cont Styling */
+.mainCont {
+  display: flex;
+  flex-direction: column;
+  background-color: #e499ad;
+  min-height: 100vh;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  animation: fadeIn 1.2s ease-out both;
+}
+
+/* Hero Styling */
+.heroSect {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  background-color: #ffe5e4;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+  animation: fadeIn 1.5s ease-out both;
+}
+
+.heroCont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.headSect {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  background-color: #ffe5e4;
+  align-content: center;
+  justify-content: center;
+  padding: 45px;
+  }
+
+.subTitle  {
+  font-family: "Courier Prime", monospace;
+  font-weight: 300;
+  font-size: clamp(15px, 2vw, 40px);
+  line-height: 50px;
+  
+}
+
+.heroTitle {
+  margin-top: 20px;
+  font-size: clamp(15px, 2.5vw, 50px);
+  font-weight: 500;
+  color: #222;
+  text-align: center;
+}
+
+span {
+    color: rgb(230, 122, 185);
+    font-weight: 600;
+    }
+
+
+.heroCont p, .end {
+  margin-top: 10px;
+  font-size: 16px;
+  color: #333;
+  max-width: 700px;
+  text-align: justify;
+}
+
+/* Footer */
+footer {
+  background-color: #fef9f3;
+  text-align: center;
+  padding: 15px;
+  border-top: 2px solid #e499ad;
+}
+
+
+#greeting {
+  font-size: 18px;
+  background-color: rgb(230, 122, 185);
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  margin-top: 15px;
+  color: #2c3e50; 
+}
+
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

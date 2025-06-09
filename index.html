@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Future of Accessible Cloud Infrastructure for Africa</title>
+    <link rel="stylesheet" href="./style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="container navBar">
+        <div class="ProjectTitle">
+          <h1>The Future of Accessible Cloud Infrastructure for Africa</h1>
+        </div>
+        <div class="navBarLinks">
+          <a href="#ProjectPitch" class="text">PROJECT PITCH</a>
+          <a href="#AboutMe" class="text">ABOUT ME</a>
+          <a href="#ProfessionalBio" class="text">PROFESSIONAL BIO</a>
+        </div>
+      </div>
+    </nav>
+
+    <main class="mainCont">
+      <section class="heroSect">
+        <section class="heroCont">
+          <div id="greeting" class="greeting"></div>
+
+          <div class="headSect fade-in">
+            <h1 class="heroTitle"> <span>HI,</span> </h1>
+            <h2 class="heroTitle">
+            I'm Vanessa Oluwajomiloju Bakare – <span>Lead Cloud Engineer</span>
+            </h2>
+          </div>
+          <div class="end">
+            <h2 class="subTitle" id="AboutMe">
+              Project Pitch: The Future of Accessible Cloud Infrastructure for
+              Africa
+            </h2>
+            <p>
+              This project envisions a future where scalable and affordable
+              cloud infrastructure empowers startups, developers, and
+              communities across Africa. By simplifying server provisioning and
+              infrastructure automation, we can close the tech accessibility gap
+              and unlock innovation on the continent.
+            </p>
+          </div>
+          <div>
+            <h2 class="subTitle" id="ProfessionalBio">About Me</h2>
+            <p>
+              I am Vanessa Oluwajomiloju Bakare (AltSchool ID:
+              ALT/SOE/024/3101), a passionate Cloud Engineering student at
+              AltSchool Africa, with a growing skill set in AWS, Linux,
+              Infrastructure as Code (IaC), and DevOps practices. I bring a
+              unique blend of technical training and a strong communication
+              background, having previously earned a degree in English and
+              Literary Studies. My leadership experience includes heading
+              editorial and project teams during my NYSC and volunteer work,
+              where I managed publications and education-focused initiatives. I
+              am committed to leveraging cloud technologies to build impactful
+              and scalable solutions.
+            </p>
+          </div>
+
+          <div>
+            <h2 class="subTitle" id="ProjectPitch">Professional Bio</h2>
+            <p>
+              My journey into tech is driven by a desire to build real-world,
+              scalable solutions and bridge the gap between African talent and
+              global opportunities. I’ve deployed web applications on AWS,
+              written technical documentation, and managed education-focused
+              projects like Cycle2Class. I’m constantly improving through
+              hands-on projects like this one, with the goal of becoming a
+              competent Cloud or DevOps Engineer ready to build for impact.
+            </p>
+          </div>
+        </section>
+      </section>
+    </main>
+    <footer>
+      <p>&copy; Vanessa Bakare | 2025</p>
+    </footer>
+    <script>
+      const greeting = document.getElementById("greeting");
+      const hour = new Date().getHours();
+      let message;
+
+      if (hour < 12) {
+        message = "Good morning! Welcome to my landing page!";
+      } else if (hour < 18) {
+        message = "Good afternoon! Welcome to my landing page!";
+      } else {
+        message = "Good evening! Welcome to my landing page!";
+      }
+
+      greeting.textContent = message;
+    </script>
+  </body>
+</html>
+
