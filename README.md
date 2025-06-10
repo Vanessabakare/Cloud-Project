@@ -8,7 +8,9 @@
 16.170.250.170
 
 ## Screenshots Of The Rendered Website
-
+![Screenshots of the landing page](screenshot1.JPG)
+![Screenshot 2](screenshot2.JPG)
+![Screenshot 3](screenshot3.JPG)
 
 ## Step-by-Step Documentation  
 ### AWS EC2 Instance
