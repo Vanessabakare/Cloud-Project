@@ -124,7 +124,7 @@ cp /var/www/html/style.css ~/altSchoolExam/
            return 301 https://$host$request_uri;
        }
        ```
-###Installed Certbot and Generated the SSL Certificate
+### Installed Certbot and Generated the SSL Certificate
 - The next thing i did was install the Certbot and  Nginx plugin, using the command below:
      ```
      sudo apt install certbot python3-certbot-nginx -y
