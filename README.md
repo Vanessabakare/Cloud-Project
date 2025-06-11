@@ -5,7 +5,8 @@
 **Description:** This is a dynamic landing page designed to demonstrate my skills in cloud engineering, web development, and server deployment using AWS EC2 and Nginx. It features a personalized, responsive layout that highlights my expertise in setting up cloud infrastructure, configuring web servers, and deploying web applications.
 
 ## My IP Address
-16.170.250.170
+Public IP Address: 16.170.250.170  
+Domain Name: vanessa-cloud.duckdns.org
 
 ## Screenshots Of The Rendered Website
 ![Screenshots of the landing page](screenshot1.JPG)
@@ -106,5 +107,39 @@ cp /var/www/html/style.css ~/altSchoolExam/
 ### Creating My README Doc
 - Then i went on to create my README doc and I included all the required info and files.
 
+### Bonus Task-  Secure with Let’s Encrypt SSL (Certbot)
+- Last minute i decided to try my hands at securing with Let's Encrypt. So i began by first setting up my domain name.
+- I found out about DuckDNS, so i created a subdomain: `vanessa-cloud.duckdns.org`.
+- Once it was successfully created, I updated the DuckDNS record to point to my EC2 public IP: `16.170.250.170`.
 
-
+### Update Nginx Configuration
+- Because of this changes i made, i navigated into my Nginx configuration folder to correct the SSL certificate paths
+- I set the `server_name` to `vanessa-cloud.duckdns.org`.
+- Next, i configured the HTTP server block to redirect all HTTP traffic to HTTPS:
+       ```
+       server {
+           listen 80;
+           listen [::]:80;
+           server_name vanessa-cloud.duckdns.org;
+           return 301 https://$host$request_uri;
+       }
+       ```
+###Installed Certbot and Generated the SSL Certificate
+- The next thing i did was install the Certbot and  Nginx plugin, using the command below:
+     ```
+     sudo apt install certbot python3-certbot-nginx -y
+     ```
+- Then i ran Certbot with the Nginx plugin using this command below:
+     ```
+     sudo certbot --nginx -d vanessa-cloud.duckdns.org
+     ```
+- Finally, i followed the prompts to:
+     - Enter my email address: 
+     - Agree to the terms of service.
+     - And to also let Certbot automatically configure HTTPS on Nginx.
+- Next, i verified that the site was accessible via:
+     ```
+     https://vanessa-cloud.duckdns.org
+     ```
+- The screenshot below shows that my site successfully deployed and is now served securely via HTTPS.
+- ![Screenshot of domain](screenshot4.JPG))
